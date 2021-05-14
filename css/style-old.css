@@ -1,0 +1,137 @@
+/*!
+ * Author : Pushpendra Kr. Sharma
+ */
+@font-face {
+    font-family: 'robotobold';
+    src: url('../fonts/roboto-bold-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/roboto-light-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* -- Global Styles -- */
+
+* {	margin:0px;	padding:0px;}
+img {max-width:100%;}
+a { color:#45bfc4; -webkit-transition: .2s ease-in-out; -moz-transition: .2s ease-in-out; transition: .2s ease-in-out;}
+a:hover {text-decoration:none;}
+a:focus { outline:none;}
+
+body {font-family:'robotoregular'; background: #fff;	font-size:16px; color: #535353; padding-top:175px;}
+h1, h2, h3, h4, h5 { margin:0;}
+
+/*-- Header --*/
+header {background:#f3f2ee; height:175px; position:fixed; width:100%; z-index:9; top:0;right: 0;left: 0; }
+.container-fluid { padding-left:0px; padding-right:0px;}
+.container-fluid .row { margin:0;}
+.container-fluid .row .col-md-12,
+.container-fluid .row .col-sm-6 { padding:0;}
+
+/*-- Mid Section --*/
+.mid-section { }
+.title-bar { background:#333; color:#fff; padding:30px 0; text-align:center;}
+.title-bar h1 { margin:0 100px; font-size:225.0%; }
+.content { padding-top:40px;  padding-right:20px; }
+.content h2 { margin:0 0 20px;}
+.content p { margin:0 0 20px;}
+.content a { color:#d01d1d; text-decoration:none;}
+.content a:hover { color:#000;}
+.content ul { margin:0 0 20px; padding:0; list-style:none;}
+.content ul li { margin:0; padding:2px 20px; background:url(../images/icon-arrow.png) no-repeat left 8px;}
+
+.form-area { background:#ccc; width:100%; height:100%; position:fixed;}
+.form-field { position:absolute; z-index:99; background:url(../images/icon-fixed-arrow.png) no-repeat left 40px; width:500px;  padding-left:60px; color:#fff;}
+.form-field h2 { font-size:150.0%; color:#fff; margin:15px 0 15px; }
+.form-field .mauticform-row { margin-bottom:10px;}
+.form-field .mauticform-errormsg { display:none; color:#ff0000; font-size:87.5%;}
+.form-field .mauticform-label, .form-field .mauticform-helpmessage { color:#fff;}
+.form-field .mauticform-selectbox { width:100%; height:40px; color:#999; font-size:87.5%; padding:0 10px;}
+.form-field input { display:block; width:100%; border:0; padding:0 10px; height:38px; color:#000; font-size:87.5%;}
+.form-field button { display:block; width:100%; background:#d11d1e; text-transform:uppercase; color:#fff; border:2px solid #fff; padding:8px 0;}
+.form-field button:hover { color:#fff;}
+.form-field .mauticform-has-error input { border:1px solid #ff0000;}
+.mauticform-post-success .mauticform-innerform { display:none;}
+
+footer { padding:20px 0; background:#333; color:#fff; font-size:87.5%; text-align:center;}
+footer a{ color:#fff; text-decoration:none;}
+footer a:hover{ color:#fff; text-decoration:underline;}
+
+
+/* ----- Media Queries ----- */
+/* ----- These follow after primary styles so they will successfully override. ----- */
+
+
+/* Large Screen - screen sizes greater than (1200px) */
+@media (min-width: 1200px) {
+	
+}
+
+@media (min-width: 1200px) and (max-width: 1366px) {
+	body {padding-top:125px;}
+	header { height:125px;}
+	.form-field { width:420px;}	
+	.form-field input {height:30px;}
+	.form-field .mauticform-selectbox { height:32px;}
+}
+
+/* Desktop - screen sizes between (992px) and (1200px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+		body {padding-top:95px;}
+	header { height:95px;}
+	.form-field input {height:30px;}
+	.form-field .mauticform-selectbox { height:32px;}	
+	
+}	
+
+/* TABLET - screen sizes between (768px) and (992px) */
+@media (min-width: 768px) and (max-width: 991px) {
+	body { font-size:14px; padding-top:72px;}
+	header { height:72px;}	
+	.form-field { width:370px;}
+	.title-bar h1 { margin:0 20px; font-size:150.0%;}
+	.content { padding:10px 0 0 0;  }
+	.content h2 { font-size:125.0%; }
+	.content h3 { font-size:112.0%;}
+	.form-field input { height:24px;}
+	.form-field .mauticform-selectbox { height:24px;}
+	
+}
+
+/* MOBILE - screen sizes less than (768px) */
+@media (max-width: 767px) {
+	body { font-size:12px; padding-top:0;}	
+	header { position:relative; height:auto;}
+	.title-bar { padding:5px 0;}
+	.title-bar h1 { font-size:150.0%; margin:0 10px;}
+	.content { padding-top:10px; padding-right:0;}
+	.content h2 { font-size:125.0%; margin:0 0 5px;}
+	.content p { margin-bottom:10px;}
+	.content ul { margin-bottom:10px;}
+	footer { padding:5px 0;}
+	.form-area { background:#222; width:100%; height:100%; position:relative;}
+	.form-field { position:relative; width:100%; height:auto; overflow:inherit; padding:10px;}
+	.form-field h2 { margin:5px 0;}
+	.form-field input { height:24px;}
+	.form-field .mauticform-selectbox { height:24px;}
+	.form-field .mauticform-row { margin-bottom:5px;}	
+	.form-field button { padding:3px 0;}
+
+}
+
+
+/* ----- END Media Queries ----- */
+
+
